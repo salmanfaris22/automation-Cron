@@ -1,0 +1,17 @@
+postgres:
+  user: "postgres"
+  password: "poomon"
+  host: "localhost"
+  port: "5432"
+  dbname: "web"
+  sslmode: "disable"
+  timezone: "Asia/Shanghai"  
+
+
+server:
+  port: :8080
+
+coinmarketcap:
+  api: "bcc05dd5-f943-48c0-8dec-1af9c7ec7af2"
+  name: "X-CMC_PRO_API_KEY"
+  url: "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
