@@ -18,6 +18,10 @@ func (r *PostgresRepo) GetAllcoin(coins *[]models.CoinData) error {
 	db := database.GetInstancePostgres()
 	return db.Find(coins).Error
 }
+func (r *PostgresRepo) GetAllcoinByID(coins *models.CoinData, coin_name string) error {
+	db := database.GetInstancePostgres()
+	return db.Where("name=?", coin_name).First(coins).Error
+}
 
 func (r *PostgresRepo) SaveDataToDatabase(coins []struct {
 	Name  string `json:"name"`

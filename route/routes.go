@@ -11,6 +11,7 @@ func SetupRoutes(router *gin.Engine) {
 	api := router.Group("/v1")
 	{
 		api.GET("/coinmarketcap", controllers.GetCoinData)
+		api.GET("/coinmarketcapById", controllers.GetCoinDataById)
 	}
 	router.Run(viper.GetString("server.port"))
 }

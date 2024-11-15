@@ -13,4 +13,5 @@ type PostgresRepository interface {
 		} `json:"quote"`
 		LastUpdated string `json:"last_updated"`
 	})
+	GetAllcoinByID(coins *models.CoinData, coin_name string) error
 }

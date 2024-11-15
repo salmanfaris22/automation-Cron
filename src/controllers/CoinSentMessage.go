@@ -8,6 +8,7 @@ import (
 
 func RunCron() {
 	c := cron.New()
-	c.AddFunc("@every 2s", service.SentMessage)
+	c.AddFunc("@every 00h00m2s", service.SentMessage)
 	c.Start()
+
 }
